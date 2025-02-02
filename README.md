@@ -9,6 +9,10 @@ Designed to be completed in two weeks (in time for Valentine's Day)!
 
 ### Day 1: February 1, 2025
 * Project setup: I set up the 2D project in Unity, and I added a .gitignore file and this README file to document my process. I also set up Git.
-* Asset creation: I couldn't find free assets for the character sprites, so I made my own :3
+* Asset creation: I decided to experiment with sprite creation by making a worm character with two different states for an animation.
 * Importing assets: Imported the assets I created and the free ones I found.
-* Added the tilesets to the tile palette.
+
+### Day 2: February 2, 2025
+* Tile palettes and tilemaps
+* Player movement
+* Camera following
