@@ -13,6 +13,8 @@ Designed to be completed in two weeks (in time for Valentine's Day)!
 * Importing assets: Imported the assets I created and the free ones I found.
 
 ### Day 2: February 2, 2025
-* Tile palettes and tilemaps
+* Tile palettes
+
+### Day 3: February 3, 2025
+* Tile maps
 * Player movement
-* Camera following
