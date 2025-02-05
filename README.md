@@ -24,3 +24,8 @@ This project is designed for me to be able to complete by Valentine's Day. Becau
 
 ### Day 3: February 3, 2025
 * Player Movement: Again, this was not a productive day because I had a math quiz to study for, but I implemented a simple player movement script. All it does right now is let the player control a sprite with WASD. There are no animations, so it just moves around in a very smooth way.
+
+### Day 4: February 4, 2025
+* Collisions: I added simple collisions, preventing the player from clipping with objects. I just used components to achieve this, and I plan to fine-tune it because at the moment, the collision areas around the objects are not as accurate as I would like.
+* Tile Map: I started the ground layer for the map, experimenting with other layers, including collision and walking behind/in front.
+![Photo of Unity with tile map and a building with collision lines around it](DevLog/Screenshots/Day4-Screenshot.png)
