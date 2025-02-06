@@ -44,8 +44,14 @@ TagManager:
   - name: Ground
     uniqueID: 3324408247
     locked: 0
+  - name: Grass
+    uniqueID: 3222906587
+    locked: 0
   - name: Water
     uniqueID: 575388145
+    locked: 0
+  - name: Background
+    uniqueID: 2813860867
     locked: 0
   - name: Walk In Front
     uniqueID: 2514790961
