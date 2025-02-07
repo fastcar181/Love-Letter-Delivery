@@ -62,6 +62,9 @@ TagManager:
   - name: Player
     uniqueID: 3226775763
     locked: 0
+  - name: NPC
+    uniqueID: 2272964841
+    locked: 0
   - name: Walk Behind
     uniqueID: 3361440645
     locked: 0
