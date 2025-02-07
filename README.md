@@ -35,3 +35,7 @@ This project is designed for me to be able to complete by Valentine's Day. Becau
 * Camera Following: I added a simple camera that follows the player as they move, making sure to not go "out of bounds" of the map. Thus, the empty parts of the grid are never shown.
 * Map Transitions: To make these zones more prominent, I added different boundaries and added a transition for the player when they move from one section to another.
 ![Demonstration of the map transition between zones](DevLog/Gifs/Feb_5_Waypoint_Transition.gif)
+
+### Day 6: February 6, 2025
+* Dialogue System: I added a (very) simple dialogue system. This was accomplished with a Dialogue Panel Game Object with a Text component. A simple script allows an NPC to be talked to if the player is close enough (using collisions). The NPC currently has a fixed set of dialogue that resets when the player stops speaking to them.
+![Demonstration of the simple dialogue system](DevLog/Gifs/Feb_6_Dialogue_Simple.gif)
