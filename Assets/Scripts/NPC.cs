@@ -13,10 +13,12 @@ public class NPC : MonoBehaviour
     private Coroutine typingCoroutine;
 
     public float wordSpeed;
-    public bool playerIsClose;
+    public bool IsClose;
+    public string NPCID {  get; private set; }
 
     private void Start()
     {
+        NPCID ??= GlobalHelper.generateUniqueID(gameObject);
         dialoguePanel.SetActive(false); // Default hide the dialogue panel
     }
 
@@ -24,7 +26,7 @@ public class NPC : MonoBehaviour
     void Update()
     {
         // If the player is close enough and presses E on the NPC, the dialogue will begin
-        if(Input.GetKeyDown(KeyCode.E) && playerIsClose)
+        if(Input.GetKeyDown(KeyCode.E) && IsClose)
         {
             if(!dialoguePanel.activeInHierarchy)
             {
@@ -90,7 +92,7 @@ public class NPC : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            playerIsClose = true;
+            IsClose = true;
         }
     }
 
@@ -98,8 +100,9 @@ public class NPC : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            playerIsClose = false;
+            IsClose = false;
             zeroText();
         }
     }
+
 }
