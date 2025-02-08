@@ -37,5 +37,9 @@ This project is designed for me to be able to complete by Valentine's Day. Becau
 ![Demonstration of the map transition between zones](DevLog/Gifs/Feb_5_Waypoint_Transition.gif)
 
 ### Day 6: February 6, 2025
-* Dialogue System: I added a (very) simple dialogue system. This was accomplished with a Dialogue Panel Game Object with a Text component. A simple script allows an NPC to be talked to if the player is close enough (using collisions). The NPC currently has a fixed set of dialogue that resets when the player stops speaking to them.
+* Dialogue System: I added a (very) simple dialogue system. This was accomplished with a Dialogue Panel GameObject with a Text component. A simple script allows an NPC to be talked to if the player is close enough (using collisions). The NPC currently has a fixed set of dialogue that resets when the player stops speaking to them.
 ![Demonstration of the simple dialogue system](DevLog/Gifs/Feb_6_Dialogue_Simple.gif)
+
+### Day 7: February 7, 2025
+* Interaction Icon: I added a simple interaction icon that pops up once the player gets close to an interactable GameObject (in this case, an NPC). However, at the moment, it also pops up once the player triggers the map transition because that collider also uses isTrigger. I need to fix this by adding an interface for interactable items to separate them from other colliders (ex. Map transitions). I should also add a check in the InteractionDetector class.
+![Demonstration of the interaction icon](DevLog/Gifs/Feb_7_Interaction_Icon.gif)
