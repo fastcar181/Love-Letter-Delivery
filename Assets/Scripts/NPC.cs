@@ -101,7 +101,10 @@ public class NPC : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             IsClose = false;
-            zeroText();
+            if(dialogueText == null)
+            {
+                zeroText();
+            }
         }
     }
 

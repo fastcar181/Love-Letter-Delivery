@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractionDetector : MonoBehaviour
 {
-    private GameObject interactableInRange = null;
+    // private GameObject interactableInRange = null;
     public GameObject interactionIcon;
     // Start is called before the first frame update
     void Start()
