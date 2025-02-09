@@ -43,3 +43,8 @@ This project is designed for me to be able to complete by Valentine's Day. Becau
 ### Day 7: February 7, 2025
 * Interaction Icon: I added a simple interaction icon that pops up once the player gets close to an interactable GameObject (in this case, an NPC). However, at the moment, it also pops up once the player triggers the map transition because that collider also uses isTrigger. I need to fix this by adding an interface for interactable items to separate them from other colliders (ex. Map transitions). I should also add a check in the InteractionDetector class.
 ![Demonstration of the interaction icon](DevLog/Gifs/Feb_7_Interaction_Icon.gif)
+
+### Day 8: February 8, 2025
+* Expanded Tile Map: I continued working on the task I like the LEAST... which was expanding the tilemap. I created the basic map which is pretty small, and I started to populate it with decorations and buildings. To be fair, the free asset pack I'm using doesn't have many variations, so I might have to scale the map down even more so I can still make the map look interesting while still using the free assets I found.
+* NPC Idle Animation: I added a simple two animation for the worm NPC that loops through two different sprites to create an idle animation. I did this without creating a script and used Unity's built-in animator. I added this animator to the worm NPC, making sure the animation loops.
+![Demonstration of the worm idle animation](DevLog/Gifs/Feb_8_Worm_Idle_Animation.gif)
