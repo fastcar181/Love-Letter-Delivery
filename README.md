@@ -7,6 +7,7 @@ Currently a WIP!
 ## Assets
 * [Fantasy Tileset](https://ventilatore.itch.io/the-fantasy-tileset)
 * [RPG Icons - Edited](https://butterymilk.itch.io/tiny-wonder-rpg-icons)
+* [Player and NPC Character Sprites](https://pixel-boy.itch.io/ninja-adventure-asset-pack)
 * [Prototype Character Sprites](https://otterisk.itch.io/hana-caraka-base-character)
 
 ## Scope
@@ -48,3 +49,8 @@ This project is designed for me to be able to complete by Valentine's Day. Becau
 * Expanded Tile Map: I continued working on the task I like the LEAST... which was expanding the tilemap. I created the basic map which is pretty small, and I started to populate it with decorations and buildings. To be fair, the free asset pack I'm using doesn't have many variations, so I might have to scale the map down even more so I can still make the map look interesting while still using the free assets I found.
 * NPC Idle Animation: I added a simple two animation for the worm NPC that loops through two different sprites to create an idle animation. I did this without creating a script and used Unity's built-in animator. I added this animator to the worm NPC, making sure the animation loops.
 ![Demonstration of the worm idle animation](DevLog/Gifs/Feb_8_Worm_Idle_Animation.gif)
+
+### Day 9: February 9, 2025
+* Asset Swap: Previously, I was using a prototype character for the player and NPCs, but I replaced it with a free asset pack I found online that had a great variety of characters! I added more NPCs and gave them some default dialogue that I plan to adjust later when I implement the letter system.
+![Photo of the newly updated map with NPCs](DevLog/Screenshots/Feb_9_Screenshot_1.png)
+![Photo of the newly updated map with NPCs](DevLog/Screenshots/Feb_9_Screenshot_2.png)
