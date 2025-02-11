@@ -54,3 +54,6 @@ This project is designed for me to be able to complete by Valentine's Day. Becau
 * Asset Swap: Previously, I was using a prototype character for the player and NPCs, but I replaced it with a free asset pack I found online that had a great variety of characters! I added more NPCs and gave them some default dialogue that I plan to adjust later when I implement the letter system.
 ![Photo of the newly updated map with NPCs](DevLog/Screenshots/Feb_9_Screenshot_1.png)
 ![Photo of the newly updated map with NPCs](DevLog/Screenshots/Feb_9_Screenshot_2.png)
+
+### Day 10: February 10, 2025
+* Dialogue Planning: I didn't feel like coding today, so I decided to work on this project in a slightly different way. I will be writing out each of the NPCs' dialogue with choices and branching. I'll also figure out the whole letter system, so I can make it easier for me to code later on. I still count this as me making progress of some kind because I needed to plan out the dialogue and branches, so I could implement it into code. I will likely refactor the dialogue logic to accommodate the addition of choices. Wish me luck please. I am going to need it.
