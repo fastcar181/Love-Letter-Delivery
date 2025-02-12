@@ -7,7 +7,7 @@ public class HotbarManager : MonoBehaviour
     public Sprite[] items;
     private int selected = -1;
     bool itemEquipped = false;
-
+    bool readingLetter = false;
     void Start()
     {
         InitHotbar();
@@ -17,6 +17,20 @@ public class HotbarManager : MonoBehaviour
     void Update()
     {
         HandleInput();
+    }
+
+    public void InitHotbar()
+    {
+        for (int i = 0; i < hotbarSlots.Length; i++)
+        {
+            hotbarSlots[i].sprite = items[i];
+            hotbarSlots[i].color = Color.white;
+        }
+    }
+
+    public int GetSelectedIndex()
+    {
+        return selected;
     }
 
     void HandleInput()
@@ -38,6 +52,19 @@ public class HotbarManager : MonoBehaviour
                 UpdateHotbarUI();
             }
         }
+        // If player presses right click and is not currently reading a letter
+        if (Input.GetMouseButtonDown(1) && itemEquipped && !readingLetter)
+        {
+            readingLetter = true;
+            print("now we open the letter");
+            ReadLetter();
+        }
+        // Check if user pressed ESC to leave the letter
+        if (readingLetter && Input.GetKeyDown(KeyCode.Escape))
+        {
+            readingLetter = false;
+            print("now we closed the letter!");
+        }
     }
 
     void UpdateHotbarUI()
@@ -55,17 +82,10 @@ public class HotbarManager : MonoBehaviour
         }
     }
 
-    public void InitHotbar()
+    public void ReadLetter()
     {
-        for (int i=0; i<hotbarSlots.Length; i++)
-        {
-            hotbarSlots[i].sprite = items[i];
-            hotbarSlots[i].color = Color.white;
-        }
-    }
-
-    public int GetSelectedIndex()
-    {
-        return selected;
+        print("in readletter function");
+        print("give the three hints that belong to the letters... maybe a popup on the right will say");
+        print("if at any point ");
     }
 }
