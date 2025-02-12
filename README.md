@@ -57,3 +57,7 @@ This project is designed for me to be able to complete by Valentine's Day. Becau
 
 ### Day 10: February 10, 2025
 * Dialogue Planning: I didn't feel like coding today, so I decided to work on this project in a slightly different way. I will be writing out each of the NPCs' dialogue with choices and branching. I'll also figure out the whole letter system, so I can make it easier for me to code later on. I still count this as me making progress of some kind because I needed to plan out the dialogue and branches, so I could implement it into code. I will likely refactor the dialogue logic to accommodate the addition of choices. Wish me luck please. I am going to need it.
+
+### Day 11: February 11, 2025
+* Inventory Hotbar: I implemented a simple hotbar system that lets the player cycle through the letters in the inventory, highlighting the selected one. I accomplished this by creating a simple UI panel for the hotbar. I created a HotbarManager script that sets the slots of the hotbar and also handles the input of the user (pressing numbers 1-6).
+![Demonstration of the inventory hotbar](DevLog/Gifs/Feb_11_Inventory_Hotbar.gif)
