@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -59,15 +60,15 @@ TagManager:
   - name: Collision
     uniqueID: 1386711761
     locked: 0
-  - name: Player
-    uniqueID: 3226775763
+  - name: Decoration
+    uniqueID: 4263500047
     locked: 0
   - name: NPC
     uniqueID: 2272964841
     locked: 0
+  - name: Player
+    uniqueID: 3226775763
+    locked: 0
   - name: Walk Behind
     uniqueID: 3361440645
-    locked: 0
-  - name: Decoration
-    uniqueID: 4263500047
     locked: 0
