@@ -14,7 +14,10 @@ public class InteractionDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        interactionIcon.SetActive(true);
+        if (collision.CompareTag("NPC"))
+        {
+            interactionIcon.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
