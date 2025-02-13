@@ -1843,16 +1843,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923ae10d258187041b01f911316c0ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 206219317}
-  dialogueText: {fileID: 671468129}
-  dialogue:
-  - Hello, child.
-  - What? I can't hear you. Speak up.
-  - Work? What about work?
-  - What? Worm? There are no worms here.
-  - If you'll excuse me...
-  wordSpeed: 0.06
+  DialoguePanel: {fileID: 206219317}
+  DialogueText: {fileID: 671468129}
+  Dialogue:
+  - old man
+  WordSpeed: 0.6
   IsClose: 0
+  ChoicePanel: {fileID: 1154677214}
+  GiveItemInHand: {fileID: 1338389304}
+  Exit: {fileID: 502777483}
+  Hotbar: {fileID: 0}
 --- !u!61 &177982675
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3422,14 +3422,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923ae10d258187041b01f911316c0ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 2127323654}
-  dialogueText: {fileID: 1550167693}
-  dialogue:
-  - What do you want?!
-  - What? Something about a worm?
-  - Man, get lost!
-  wordSpeed: 0.06
+  DialoguePanel: {fileID: 2127323654}
+  DialogueText: {fileID: 1550167693}
+  Dialogue:
+  - something
+  WordSpeed: 0.6
   IsClose: 0
+  ChoicePanel: {fileID: 1154677214}
+  GiveItemInHand: {fileID: 1338389304}
+  Exit: {fileID: 502777483}
+  Hotbar: {fileID: 0}
 --- !u!61 &254581412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3542,6 +3544,85 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &276569608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 276569609}
+  - component: {fileID: 276569611}
+  - component: {fileID: 276569610}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &276569609
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276569608}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1338389303}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &276569610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276569608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 26
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 48
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Give Item In Hand
+--- !u!222 &276569611
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276569608}
+  m_CullTransparentMesh: 1
 --- !u!1 &282764499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3808,15 +3889,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923ae10d258187041b01f911316c0ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 1215673020}
-  dialogueText: {fileID: 1001135952}
-  dialogue:
-  - You are going to do the task, yes?
-  - That's only if you wish to turn your girlfriend back into a human...
-  - HAHAHAHAHAHHAH!
-  - Okay, please go now.
-  wordSpeed: 0.06
+  DialoguePanel: {fileID: 1215673020}
+  DialogueText: {fileID: 1001135952}
+  Dialogue:
+  - hallo
+  WordSpeed: 0.6
   IsClose: 0
+  ChoicePanel: {fileID: 1154677214}
+  GiveItemInHand: {fileID: 1338389304}
+  Exit: {fileID: 502777483}
+  Hotbar: {fileID: 0}
 --- !u!61 &335053461
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5318,6 +5400,127 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488175538}
+  m_CullTransparentMesh: 1
+--- !u!1 &502777481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 502777482}
+  - component: {fileID: 502777485}
+  - component: {fileID: 502777484}
+  - component: {fileID: 502777483}
+  m_Layer: 5
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &502777482
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502777481}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1727900765}
+  m_Father: {fileID: 1154677215}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 737, y: -148}
+  m_SizeDelta: {x: 250, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &502777483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502777481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 502777484}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &502777484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502777481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &502777485
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502777481}
   m_CullTransparentMesh: 1
 --- !u!1 &519420028
 GameObject:
@@ -19383,15 +19586,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923ae10d258187041b01f911316c0ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 488175538}
-  dialogueText: {fileID: 457447673}
-  dialogue:
-  - Um... hello...
-  - I'm kind of busy right now...
-  - Um... okay...
-  - Bye... I guess.
-  wordSpeed: 0.06
+  DialoguePanel: {fileID: 488175538}
+  DialogueText: {fileID: 457447673}
+  Dialogue:
+  - hai
+  WordSpeed: 0.6
   IsClose: 0
+  ChoicePanel: {fileID: 1154677214}
+  GiveItemInHand: {fileID: 1338389304}
+  Exit: {fileID: 502777483}
+  Hotbar: {fileID: 0}
 --- !u!61 &639682376
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32161,14 +32365,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923ae10d258187041b01f911316c0ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 1924440644}
-  dialogueText: {fileID: 282764501}
-  dialogue:
-  - Hey there!
-  - I haven't seen you around.
-  - Call me an orange, cause I'll see you around!
-  wordSpeed: 0.06
+  DialoguePanel: {fileID: 1924440644}
+  DialogueText: {fileID: 282764501}
+  Dialogue:
+  - Dialogue goes here.
+  WordSpeed: 0.6
   IsClose: 0
+  ChoicePanel: {fileID: 1154677214}
+  GiveItemInHand: {fileID: 1338389304}
+  Exit: {fileID: 502777483}
+  Hotbar: {fileID: 0}
 --- !u!61 &923630847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32638,6 +32844,83 @@ Transform:
   - {fileID: 1944636469}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1154677214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1154677215}
+  - component: {fileID: 1154677217}
+  - component: {fileID: 1154677216}
+  m_Layer: 5
+  m_Name: Choice Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1154677215
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154677214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1338389303}
+  - {fileID: 502777482}
+  m_Father: {fileID: 1443115118}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1154677216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154677214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1154677217
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154677214}
+  m_CullTransparentMesh: 1
 --- !u!1 &1155100226
 GameObject:
   m_ObjectHideFlags: 0
@@ -33735,6 +34018,127 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326342010}
   m_CullTransparentMesh: 1
+--- !u!1 &1338389302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338389303}
+  - component: {fileID: 1338389306}
+  - component: {fileID: 1338389305}
+  - component: {fileID: 1338389304}
+  m_Layer: 5
+  m_Name: Give Item In Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1338389303
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338389302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 276569609}
+  m_Father: {fileID: 1154677215}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 737, y: -71}
+  m_SizeDelta: {x: 250, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1338389304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338389302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1338389305}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1338389305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338389302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1338389306
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338389302}
+  m_CullTransparentMesh: 1
 --- !u!1 &1443115114
 GameObject:
   m_ObjectHideFlags: 0
@@ -33830,13 +34234,14 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1924440645}
-  - {fileID: 1222298747}
   - {fileID: 2127323655}
+  - {fileID: 1222298747}
   - {fileID: 831312820}
   - {fileID: 488175539}
   - {fileID: 206219318}
   - {fileID: 1215673021}
   - {fileID: 1830894179}
+  - {fileID: 1154677215}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -34062,15 +34467,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923ae10d258187041b01f911316c0ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 1222298746}
-  dialogueText: {fileID: 82234094}
-  dialogue:
-  - Oh, hello!
-  - What is your name, dearie?
-  - I could use a son. It gets lonely around here.
-  - Take care, sweetie.
-  wordSpeed: 0.06
+  DialoguePanel: {fileID: 1222298746}
+  DialogueText: {fileID: 82234094}
+  Dialogue:
+  - old lady
+  WordSpeed: 0.6
   IsClose: 0
+  ChoicePanel: {fileID: 1154677214}
+  GiveItemInHand: {fileID: 1338389304}
+  Exit: {fileID: 502777483}
+  Hotbar: {fileID: 0}
 --- !u!61 &1563009672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34439,6 +34845,85 @@ RectTransform:
   m_AnchoredPosition: {x: 214.5845, y: -12.202}
   m_SizeDelta: {x: 1469.3711, y: 291.638}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1727900764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1727900765}
+  - component: {fileID: 1727900767}
+  - component: {fileID: 1727900766}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1727900765
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727900764}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 502777482}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1727900766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727900764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 26
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Exit
+--- !u!222 &1727900767
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727900764}
+  m_CullTransparentMesh: 1
 --- !u!1 &1751137030
 GameObject:
   m_ObjectHideFlags: 0
@@ -34559,17 +35044,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923ae10d258187041b01f911316c0ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 1830894178}
-  dialogueText: {fileID: 1675855617}
-  dialogue:
-  - This cannot be happening...
-  - He seriously turned me into a worm...
-  - You've gotta help me!
-  - I feel so afraid like this...
-  - Are you leaving now?
-  - (Sadly) Call me an orange... cause I'll see you around...
-  wordSpeed: 0.06
+  DialoguePanel: {fileID: 1830894178}
+  DialogueText: {fileID: 1675855617}
+  Dialogue:
+  - im a worm
+  WordSpeed: 0.6
   IsClose: 0
+  ChoicePanel: {fileID: 1154677214}
+  GiveItemInHand: {fileID: 1338389304}
+  Exit: {fileID: 502777483}
+  Hotbar: {fileID: 0}
 --- !u!70 &1751137035
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -35143,15 +35627,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923ae10d258187041b01f911316c0ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 831312819}
-  dialogueText: {fileID: 1155412016}
-  dialogue:
-  - Hey, I'm clearly undercover!
-  - Well, the jig is up, I guess.
-  - Fine, I'm an undercover agent. What do you want?
-  - Well, spit it out! Or leave me alone.
-  wordSpeed: 0.06
+  DialoguePanel: {fileID: 831312819}
+  DialogueText: {fileID: 1155412016}
+  Dialogue:
+  - im sussy
+  WordSpeed: 0.6
   IsClose: 0
+  ChoicePanel: {fileID: 1154677214}
+  GiveItemInHand: {fileID: 1338389304}
+  Exit: {fileID: 502777483}
+  Hotbar: {fileID: 0}
 --- !u!61 &2052709929
 BoxCollider2D:
   m_ObjectHideFlags: 0

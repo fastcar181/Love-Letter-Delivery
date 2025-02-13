@@ -67,7 +67,7 @@ public class HotbarManager : MonoBehaviour
         }
     }
 
-    void UpdateHotbarUI()
+    public void UpdateHotbarUI()
     {
         for (int i=0; i<hotbarSlots.Length; i++)
         {
@@ -86,6 +86,5 @@ public class HotbarManager : MonoBehaviour
     {
         print("in readletter function");
         print("give the three hints that belong to the letters... maybe a popup on the right will say");
-        print("if at any point ");
     }
 }
