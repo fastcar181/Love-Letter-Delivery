@@ -20,11 +20,14 @@ public class NPC : MonoBehaviour
     public Button Exit;
 
     public HotbarManager Hotbar;
-    public string NPCID {  get; private set; }
+
+    public static string NPCName;
+    public static List<string> UnavailableNPCS = new List<string>();
 
     private void Start()
     {
-        NPCID ??= GlobalHelper.generateUniqueID(gameObject);
+        UnavailableNPCS.Add("Worm NPC"); // Will always be unavailable to give
+        UnavailableNPCS.Add("Wizard"); // Will always be unavailable to give
         DialoguePanel.SetActive(false); // Default hide the dialogue panel
         ChoicePanel.SetActive(false);
         Hotbar = FindAnyObjectByType<HotbarManager>();
@@ -36,9 +39,10 @@ public class NPC : MonoBehaviour
     void Update()
     {
         // If the player is close enough and presses E on the NPC, the dialogue will begin
-        if(Input.GetKeyDown(KeyCode.E) && IsClose)
+        if (Input.GetKeyDown(KeyCode.E) && IsClose)
         {
-            if(!DialoguePanel.activeInHierarchy)
+            PlayerMovement.SetMove(false);
+            if (!DialoguePanel.activeInHierarchy)
             {
                 DialoguePanel.SetActive(true);
                 Index = 0;
@@ -46,7 +50,7 @@ public class NPC : MonoBehaviour
             }
         }
         // Continue the dialogue
-        if(DialoguePanel.activeInHierarchy && Input.anyKeyDown)
+        if (DialoguePanel.activeInHierarchy && Input.anyKeyDown)
         {
             // If button is pressed mid dialogue, stop typing it
             if (IsTyping)
@@ -62,13 +66,14 @@ public class NPC : MonoBehaviour
             }
         }
     }
-    
+
     public void zeroText()
     {
         DialogueText.text = "";
         Index = 0;
         DialoguePanel.SetActive(false);
         ChoicePanel.SetActive(false);
+        PlayerMovement.SetMove(true);
     }
 
     // Typing effect
@@ -76,7 +81,7 @@ public class NPC : MonoBehaviour
     {
         IsTyping = true;
         DialogueText.text = "";
-        foreach(char letter in Dialogue[Index].ToCharArray())
+        foreach (char letter in Dialogue[Index].ToCharArray())
         {
             DialogueText.text += letter;
             yield return new WaitForSeconds(WordSpeed);
@@ -86,7 +91,7 @@ public class NPC : MonoBehaviour
 
     public void NextLine()
     {
-        if(Index < Dialogue.Length - 1)
+        if (Index < Dialogue.Length - 1)
         {
             Index++;
             DialogueText.text = "";
@@ -105,17 +110,32 @@ public class NPC : MonoBehaviour
 
     private void GiveItem()
     {
-        print("gave item");
+        if (Score.end) return;
         int selected = Hotbar.GetSelectedIndex();
-        if(selected == -1)
+        Letter letter = Hotbar.letters[selected];
+        if (UnavailableNPCS.Contains(NPCName))
         {
-            print("no item selected!!!");
+            ExitDialogue();
+            return;
         }
-        else
+        else if (selected == -1)
         {
-            Sprite item = Hotbar.hotbarSlots[selected].sprite;
-            Hotbar.hotbarSlots[selected].sprite = null;
-            Hotbar.items[selected] = null;
+            ExitDialogue();
+            return;
+        }
+        // Remove the letter
+        Hotbar.hotbarSlots[selected].sprite = null;
+        Hotbar.items[selected] = null;
+        UnavailableNPCS.Add(NPCName); // After giving a letter, this NPC gets added to the list of unavailable NPCs
+        Score.IncreaseNumDelivered();
+        if (letter.GetNPCName().Equals(NPCName))
+        {
+            Score.IncreaseScoreNum();
+        }
+        if (Score.CheckDeliveryStatus())
+        {
+            Score.DetermineEnding();
+            return;
         }
         ExitDialogue();
     }
@@ -129,6 +149,7 @@ public class NPC : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             IsClose = true;
+            NPCName = gameObject.name;
         }
     }
 
@@ -137,10 +158,11 @@ public class NPC : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             IsClose = false;
-            if(DialogueText == null)
+            if (DialogueText == null)
             {
                 zeroText();
             }
+            NPCName = "";
         }
     }
 

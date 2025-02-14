@@ -1,44 +1,46 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Score : MonoBehaviour
+public class Score
 {
-    private int NumDelivered; // Number of letters delivered
-    private int score; // Increases by 1 if the player delivers to the right person
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private static int NumDelivered = 0; // Number of letters delivered
+    private static int ScoreNum = 0; // Increases by 1 if the player delivers to the right person
+    public static bool end = false;
 
-    // Update is called once per frame
-    void Update()
+    public static bool CheckDeliveryStatus()
     {
-        
-    }
-
-    void CheckDeliveryStatus()
-    {
+        Debug.Log(ScoreNum);
         if (NumDelivered == 6)
         {
-            print("all letters delivered. time to check if you did good!");
-            DetermineEnding();
+            return true;
         }
-
+        return false;
     }
 
-    void DetermineEnding()
+    public static void IncreaseNumDelivered()
     {
-        print("in calcscore...");
-        if (NumDelivered == score)
+        NumDelivered++;
+    }
+
+    public static void IncreaseScoreNum()
+    {
+        ScoreNum++;
+    }
+
+    public static void DetermineEnding()
+    {
+        end = true;
+        if (NumDelivered == ScoreNum)
         {
-            print("congrats! you successfully delivered all the letters and turned grace back into a worm.");
+            Debug.Log("YOU WON!");
         }
         else
         {
-            print("oh no... you didn't deliver them successfully. it's a valentine's day disaster! grace is a worm forever and she is angry with you.");
+            Debug.Log("YOU LOSE BAI!");
         }
-        print($"you delivered {score} letters!" );
+        Debug.Log($"you delivered {ScoreNum} letters!");
+        Application.Quit();
     }
 }
