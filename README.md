@@ -61,3 +61,7 @@ This project is designed for me to be able to complete by Valentine's Day. Becau
 ### Day 11: February 11, 2025
 * Inventory Hotbar: I implemented a simple hotbar system that lets the player cycle through the letters in the inventory, highlighting the selected one. I accomplished this by creating a simple UI panel for the hotbar. I created a HotbarManager script that sets the slots of the hotbar and also handles the input of the user (pressing numbers 1-6).
 ![Demonstration of the inventory hotbar](DevLog/Gifs/Feb_11_Inventory_Hotbar.gif)
+
+### Day 12: February 12, 2025
+* Dialogue Buttons: I'm on the final stretch of this project, and I think I might just make it in time. I created a Choice Panel in the same canvas the Dialogue Panels, and I added two buttons to the Choice Panel - `give item` and `exit`. The `give item` button "gives" the NPC the letter the player is holding then exits the conversation. The `exit` button does as you would expect.
+![Photo of the dialogue buttons](DevLog/Screenshots/Feb_12_Screenshot.png)
