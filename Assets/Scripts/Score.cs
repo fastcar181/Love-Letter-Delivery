@@ -50,7 +50,7 @@ public class Score : MonoBehaviour
         EndGamePanel.SetActive(true);
         EndGameText.text = (NumDelivered == ScoreNum) ? "YOU WON!" : "YOU LOSE!";
         EndGameText.text += $"\nYou delivered {ScoreNum} letter(s) correctly!";
-        EndGameText.text = (NumDelivered == ScoreNum) ? "Great job!" : "Erm... nice try...";
+        EndGameText.text += "Whether you won or lost, I love my Nick, and Happy Valentine's Day!";
         StartCoroutine(QuitGameAfterDelay());
     }
 
