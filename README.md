@@ -68,3 +68,10 @@ This project is designed for me to be able to complete by Valentine's Day. Becau
 
 ### Day 13: February 13, 2025
 * Letter Delivery System: I implemented the letter delivery system using a Letter class that contains an NPC name and the hint of the letter. In the HotbarManager, I randomized the order of the letters, so it's different every time - I used a simple shuffling algorithm that I found on Wikipedia. Next, I made it so that if the player presses on the `give item` button, it checks if the NPC has already been given a letter or is an NPC that does not take letters. I used a Score class to keep track of the number of deliveries and the score of correct letter matching. Once the final letter is delivered, the game ends. All I need to complete now is adding walking animations for the player, create an end game UI, and populate the NPCs' dialogues with the ones I've preapred in a separate document.
+
+### Day 14: February 14, 2025
+* End Game UI: I decided to keep it simple with the End Game UI. All it does is display whether the player won or lost in addition to the number of letters correctly delivered.
+* NPC Dialogue: I finally finished putting in all the NPCs dialogues.
+
+### Conclusion
+With the 2 weeks coming to an end, I have a lot to reflect on. This experience was both challenging yet rewarding at the same time. I was completely new to game development at the beginning, and while I'm still fresh to this, I at least know how to do something small. This was a great way for me to dip my toes into C#. I actually was learning as I worked on this project, and it stuck with me because I wasn't just creating silly little programs to try and learn. I applied my knowledge to something I wanted to make. Also, the challenge was not C# but it was Unity. This was challenging, and I'd be lying if I said I wasn't excited to take a break from this. I'll definitely come back to this project in the future - refactor code, add more features, polish it up. For now, I created a prototype that I'm pretty content with.
