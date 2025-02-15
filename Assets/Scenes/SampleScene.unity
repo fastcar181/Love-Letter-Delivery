@@ -1846,7 +1846,16 @@ MonoBehaviour:
   DialoguePanel: {fileID: 206219317}
   DialogueText: {fileID: 671468129}
   Dialogue:
-  - old man
+  - Hello, young child.
+  - I see a ring in your future. Oh, and a bouquet of roses!
+  - How lovely. I always get roses on days like these...
+  - But let me tell you something child, as an old man, I have lived through a lot.
+  - My knowledge is like gold.
+  - If you and your wife ever get into an argument, I recommend you accept the blame.
+  - It was probably your fault anyway, HAHA!
+  - Oh, lighten up, it was a joke. The townsfolk love my jokes. They always talk
+    to me.
+  - Take care, child.
   WordSpeed: 0.6
   IsClose: 0
   ChoicePanel: {fileID: 1154677214}
@@ -3425,7 +3434,15 @@ MonoBehaviour:
   DialoguePanel: {fileID: 2127323654}
   DialogueText: {fileID: 1550167693}
   Dialogue:
-  - something
+  - Yo, what do you want?
+  - What am I doing here? I just do what I want... whenever I want... wherever I
+    want.
+  - I'm cool like that.
+  - There's nothing quite like getting some fresh air.
+  - The fresh breeze on my toes is very relaxing...
+  - I've lived through so much.
+  - Skydiving, bungee jumping... Oh, man, I live for the adrenaline!
+  - Well, get lost now.
   WordSpeed: 0.6
   IsClose: 0
   ChoicePanel: {fileID: 1154677214}
@@ -3892,7 +3909,12 @@ MonoBehaviour:
   DialoguePanel: {fileID: 1215673020}
   DialogueText: {fileID: 1001135952}
   Dialogue:
-  - hallo
+  - Your little worm is going to be angry you're wasting time talking to me.
+  - What? I'm not here to give you hints.
+  - Just leave me alone. I am going to sit here. Quietly.
+  - You are disturbing my peace.
+  - Goodbye now.
+  - Good luck, I guess.
   WordSpeed: 0.6
   IsClose: 0
   ChoicePanel: {fileID: 1154677214}
@@ -19589,7 +19611,13 @@ MonoBehaviour:
   DialoguePanel: {fileID: 488175538}
   DialogueText: {fileID: 457447673}
   Dialogue:
-  - hai
+  - Um, are you talking to me?
+  - I've never seen you around before.
+  - Oh, you smell like roses... I'm not a big fan of roses. Not even just roses though.
+  - I like nature as a whole though.
+  - Hmm? You wanna know more about me?
+  - I'd love to stay and chat, but I have to clean. Living alone sure is tough.
+  - Goodbye, kind person...
   WordSpeed: 0.6
   IsClose: 0
   ChoicePanel: {fileID: 1154677214}
@@ -32048,6 +32076,98 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &702366884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 702366885}
+  - component: {fileID: 702366888}
+  - component: {fileID: 702366887}
+  - component: {fileID: 702366886}
+  m_Layer: 5
+  m_Name: End Game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &702366885
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702366884}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1844667888}
+  m_Father: {fileID: 1944636469}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &702366886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702366884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac08e13b4bf7e244ab00ec0439d1ca37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  end: 0
+  EndGamePanel: {fileID: 702366884}
+  EndGameText: {fileID: 1844667889}
+--- !u!114 &702366887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702366884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &702366888
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702366884}
+  m_CullTransparentMesh: 1
 --- !u!1 &756247413
 GameObject:
   m_ObjectHideFlags: 0
@@ -33711,6 +33831,7 @@ GameObject:
   - component: {fileID: 1245409301}
   - component: {fileID: 1245409300}
   - component: {fileID: 1245409304}
+  - component: {fileID: 1245409305}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -33870,6 +33991,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8684453, y: 0.42176676}
   m_EdgeRadius: 0
+--- !u!95 &1245409305
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245409299}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 735bed506f50fea45b2a50e56e5b29ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1302089332
 GameObject:
   m_ObjectHideFlags: 0
@@ -34477,7 +34619,14 @@ MonoBehaviour:
   DialoguePanel: {fileID: 1222298746}
   DialogueText: {fileID: 82234094}
   Dialogue:
-  - old lady
+  - Oh, hello, dearie. What a wonderful smell.
+  - You smell like a rose. Isn't that just delightful?
+  - The flower that symbolizes love... why, it's my favourite.
+  - That takes me back to my youth.
+  - Once, I went on a date, and it started raining...
+  - A little worm showed up. Isn't that adorable?
+  - I wonder when the next rainfall will take place.
+  - Oh, you are leaving? Goodbye.
   WordSpeed: 0.6
   IsClose: 0
   ChoicePanel: {fileID: 1154677214}
@@ -35054,7 +35203,15 @@ MonoBehaviour:
   DialoguePanel: {fileID: 1830894178}
   DialogueText: {fileID: 1675855617}
   Dialogue:
-  - im a worm
+  - Found a way to turn me back yet?
+  - You're seriously dilly dallying here instead of actually doing something to help
+    me?
+  - Alright, man. I'll just be a worm forever.
+  - Alone... bitter...
+  - (Sigh) I wish I could feel my soft hands again...
+  - This sucks so bad.
+  - Are you leaving now?
+  - (Sadly) Call me an orange, 'cause I'll see you around...
   WordSpeed: 0.6
   IsClose: 0
   ChoicePanel: {fileID: 1154677214}
@@ -35173,6 +35330,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830894178}
+  m_CullTransparentMesh: 1
+--- !u!1 &1844667887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1844667888}
+  - component: {fileID: 1844667890}
+  - component: {fileID: 1844667889}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1844667888
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844667887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 702366885}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.8391, y: 12.7965}
+  m_SizeDelta: {x: 1805.6417, y: 342.2365}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1844667889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844667887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 60
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1844667890
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844667887}
   m_CullTransparentMesh: 1
 --- !u!1 &1855929051
 GameObject:
@@ -35511,6 +35747,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1554564668}
+  - {fileID: 702366885}
   m_Father: {fileID: 1122341170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -35718,7 +35955,16 @@ MonoBehaviour:
   DialoguePanel: {fileID: 831312819}
   DialogueText: {fileID: 1155412016}
   Dialogue:
-  - im sussy
+  - You, there!
+  - You're giving me away!
+  - Oh, what the hell. The jig is up anyway. Yes, I am spying. So, what?
+  - What? You're asking me about a worm? Buddy, I don't find that very funny.
+  - You know, back in my day, jokes were actually funny.
+  - That was a long time ago.
+  - Anyway, I've got a job to do.
+  - Even on Valentine's Day... I'm married to my job, what can I say?
+  - I like being a spy. I get to use my brain.
+  - Alright, you overstayed your welcome. Scram!
   WordSpeed: 0.6
   IsClose: 0
   ChoicePanel: {fileID: 1154677214}

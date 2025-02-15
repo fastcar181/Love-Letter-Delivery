@@ -1,46 +1,62 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Score
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Score : MonoBehaviour
 {
-    private static int NumDelivered = 0; // Number of letters delivered
-    private static int ScoreNum = 0; // Increases by 1 if the player delivers to the right person
-    public static bool end = false;
+    public static Score Instance; // Singleton instance
 
-    public static bool CheckDeliveryStatus()
+    private int NumDelivered = 0;
+    private int ScoreNum = 0;
+    public bool end = false;
+
+    public GameObject EndGamePanel;
+    public Text EndGameText;
+
+    private void Awake()
     {
-        Debug.Log(ScoreNum);
-        if (NumDelivered == 6)
+        EndGamePanel.SetActive(false);
+        if (Instance == null)
         {
-            return true;
+            Instance = this;
         }
-        return false;
+        else
+        {
+            Destroy(gameObject); // Ensures only one instance exists
+        }
     }
 
-    public static void IncreaseNumDelivered()
+    public bool CheckDeliveryStatus()
+    {
+        return NumDelivered == 6;
+    }
+
+    public void IncreaseNumDelivered()
     {
         NumDelivered++;
     }
 
-    public static void IncreaseScoreNum()
+    public void IncreaseScoreNum()
     {
         ScoreNum++;
     }
 
-    public static void DetermineEnding()
+    public void DetermineEnding()
     {
         end = true;
-        if (NumDelivered == ScoreNum)
-        {
-            Debug.Log("YOU WON!");
-        }
-        else
-        {
-            Debug.Log("YOU LOSE BAI!");
-        }
-        Debug.Log($"you delivered {ScoreNum} letters!");
+        EndGamePanel.SetActive(true);
+        EndGameText.text = (NumDelivered == ScoreNum) ? "YOU WON!" : "YOU LOSE!";
+        EndGameText.text += $"\nYou delivered {ScoreNum} letter(s) correctly!";
+        EndGameText.text = (NumDelivered == ScoreNum) ? "Great job!" : "Erm... nice try...";
+        StartCoroutine(QuitGameAfterDelay());
+    }
+
+    private IEnumerator QuitGameAfterDelay()
+    {
+        yield return new WaitForSeconds(3f);
         Application.Quit();
     }
 }

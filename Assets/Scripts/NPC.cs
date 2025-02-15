@@ -23,7 +23,6 @@ public class NPC : MonoBehaviour
 
     public static string NPCName;
     public static List<string> UnavailableNPCS = new List<string>();
-
     private void Start()
     {
         UnavailableNPCS.Add("Worm NPC"); // Will always be unavailable to give
@@ -110,15 +109,15 @@ public class NPC : MonoBehaviour
 
     private void GiveItem()
     {
-        if (Score.end) return;
+        if (Score.Instance.end) return;
         int selected = Hotbar.GetSelectedIndex();
-        Letter letter = Hotbar.letters[selected];
-        if (UnavailableNPCS.Contains(NPCName))
+        if(selected == -1)
         {
             ExitDialogue();
             return;
         }
-        else if (selected == -1)
+        Letter letter = Hotbar.letters[selected];
+        if (UnavailableNPCS.Contains(NPCName))
         {
             ExitDialogue();
             return;
@@ -127,14 +126,14 @@ public class NPC : MonoBehaviour
         Hotbar.hotbarSlots[selected].sprite = null;
         Hotbar.items[selected] = null;
         UnavailableNPCS.Add(NPCName); // After giving a letter, this NPC gets added to the list of unavailable NPCs
-        Score.IncreaseNumDelivered();
+        Score.Instance.IncreaseNumDelivered();
         if (letter.GetNPCName().Equals(NPCName))
         {
-            Score.IncreaseScoreNum();
+            Score.Instance.IncreaseScoreNum();
         }
-        if (Score.CheckDeliveryStatus())
+        if (Score.Instance.CheckDeliveryStatus())
         {
-            Score.DetermineEnding();
+            Score.Instance.DetermineEnding();
             return;
         }
         ExitDialogue();

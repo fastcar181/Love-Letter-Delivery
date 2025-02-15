@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     float speedX, speedY;
     private Rigidbody2D body;
     private static bool CanMove;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
             speedX = Input.GetAxisRaw("Horizontal") * speed;
             speedY = Input.GetAxisRaw("Vertical") * speed;
             body.velocity = new Vector2(speedX, speedY);
+
         }
     }
 
